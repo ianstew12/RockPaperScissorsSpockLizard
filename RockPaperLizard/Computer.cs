@@ -13,11 +13,11 @@ namespace RockPaperLizard
             this.name = "ComputerPlayer";           
         }
 
-        public override int ChooseWeapon()      
+        public override void ChooseWeapon()      
         {
             Random randomNumber = new Random();
             int computerChoice = randomNumber.Next(0,5);
-            return computerChoice;
+            weaponChoice= computerChoice;
         }
     }
 }

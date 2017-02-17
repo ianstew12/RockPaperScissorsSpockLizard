@@ -10,15 +10,16 @@ namespace RockPaperLizard
     {
         public string name;
         public int roundsWon;
+        public int weaponChoice;
         
         public Player()
         {
             roundsWon = 0;
         }
 
-        public virtual int ChooseWeapon()   
+        public virtual void ChooseWeapon()   
         {
-            return 3;                     // TODO.           will never actually be returned 
+            weaponChoice= 3;                     // TODO.           will never actually be returned 
         }
     }
 }
