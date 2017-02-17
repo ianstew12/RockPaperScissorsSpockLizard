@@ -1,0 +1,6 @@
+c:\users\ianst\documents\visual studio 2015\Projects\RockPaperLizard\RockPaperLizard\bin\Debug\RockPaperLizard.exe.config
+C:\Users\ianst\documents\visual studio 2015\Projects\RockPaperLizard\RockPaperLizard\bin\Debug\RockPaperLizard.exe
+C:\Users\ianst\documents\visual studio 2015\Projects\RockPaperLizard\RockPaperLizard\bin\Debug\RockPaperLizard.pdb
+C:\Users\ianst\documents\visual studio 2015\Projects\RockPaperLizard\RockPaperLizard\obj\Debug\RockPaperLizard.csprojResolveAssemblyReference.cache
+C:\Users\ianst\documents\visual studio 2015\Projects\RockPaperLizard\RockPaperLizard\obj\Debug\RockPaperLizard.exe
+C:\Users\ianst\documents\visual studio 2015\Projects\RockPaperLizard\RockPaperLizard\obj\Debug\RockPaperLizard.pdb
