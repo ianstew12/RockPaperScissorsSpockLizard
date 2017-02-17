@@ -10,7 +10,7 @@ namespace RockPaperLizard
     {  
         public Player player1;
         public Player player2;
-        private int bestOf;
+        private int toWin;
         public List<string> weapons; 
         
         public Game()
@@ -54,18 +54,21 @@ namespace RockPaperLizard
         public void AskBestOf()
         {
             Console.WriteLine("How many games do you want to play best out of? Must be an odd integer.");
-            bestOf = int.Parse(Console.ReadLine());
-            if (bestOf <=0 || bestOf % 2 != 1)      //TODO check against enter with no value -- look at TryParse
-            {                                       // TRY AND CATCH error handling 
+            int bestOf = int.Parse(Console.ReadLine());
+            if (bestOf <= 0 || bestOf % 2 != 1)      
+            {                                       // TRY AND CATCH error handling. avoiding for now 
                 Console.WriteLine("Must be an odd integer (3,5,7...)");
                 AskBestOf();
             }
-            //use ToWin member variable instead? only do the division once
+            else
+            {
+                toWin = (bestOf / 2);
+            }
         }
 
          public void PlayRound()
         {
-            //each player chooses weapon (find a,b)
+   
             player1.ChooseWeapon();                 
             player2.ChooseWeapon();
             
@@ -76,12 +79,12 @@ namespace RockPaperLizard
         
            public void CheckScore()
         {
-            if (player1.roundsWon > (bestOf/2))
+            if (player1.roundsWon > toWin)
             {
                 Console.WriteLine(player1.name.ToUpper() + " WINS THE GAME!");
                 Console.ReadLine();
             }
-            else if (player2.roundsWon > (bestOf/2))
+            else if (player2.roundsWon > toWin)
             {
                 Console.WriteLine(player2.name.ToUpper() + " WINS THE GAME!");
                 Console.ReadLine();

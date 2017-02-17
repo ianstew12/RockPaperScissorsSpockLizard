@@ -13,7 +13,7 @@ namespace RockPaperLizard
             Game StarterGame = new Game();
             StarterGame.SetUpPlayers();
             StarterGame.AskBestOf();
-            StarterGame.PlayRound();        //? checkscore separate function 
+            StarterGame.PlayRound();        
         }
     }
 }

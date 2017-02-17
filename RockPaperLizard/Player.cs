@@ -17,9 +17,6 @@ namespace RockPaperLizard
             roundsWon = 0;
         }
 
-        public virtual void ChooseWeapon()   
-        {
-            weaponChoice= 3;                     // TODO.           will never actually be returned 
-        }
+        public virtual void ChooseWeapon(){}
     }
 }
