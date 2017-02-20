@@ -26,7 +26,8 @@ namespace RockPaperLizard
 
         public void SetUpPlayers()
         {
-            Console.WriteLine("Welcome to the game. I'll spare you the rules. Enter '1' to play against a computer or '2' to play against another person.");
+            Console.WriteLine("Welcome to the game. I'll spare you the rules. Enter '1' to play against"
+                +" a computer or '2' to play against another person.");
             string playersLine = Console.ReadLine();
             int humanPlayers;
             bool playersEntry = int.TryParse(playersLine, out humanPlayers);        

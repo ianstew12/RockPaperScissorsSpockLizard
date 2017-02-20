@@ -14,7 +14,8 @@ namespace RockPaperLizard
 
     public override void ChooseWeapon()      
         {
-            Console.WriteLine( name +  ", enter the number for your choice of weapon. \n0 - paper.\n1 - spock. \n2 - rock. \n3 - scissors. \n4 - lizard ");
+            Console.WriteLine( name +  ", enter the number for your choice of weapon. \n0 - "
+                + "paper.\n1 - spock. \n2 - rock. \n3 - scissors. \n4 - lizard ");
             int humanChoice = int.Parse(Console.ReadLine());    
             if (humanChoice != 0 && humanChoice != 1 && humanChoice != 2 && humanChoice != 3 && humanChoice != 4)
             {
