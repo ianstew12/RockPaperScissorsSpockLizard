@@ -29,10 +29,10 @@ namespace RockPaperLizard
             Console.WriteLine("Welcome to the game. I'll spare you the rules. Enter '1' to play against a computer or '2' to play against another person.");
             string playersLine = Console.ReadLine();
             int humanPlayers;
-            bool playersEntry = int.TryParse(playersLine, out humanPlayers);        //sets humanPlayers to int.Parse(playersEntry) if it exists
+            bool playersEntry = int.TryParse(playersLine, out humanPlayers);        
             if (!playersEntry)
             {
-                Console.WriteLine("Your entry of '{0}' was not '1' or '2'", playersLine);        //string interpolation (bad example - usually empty)
+                Console.WriteLine("Your entry of '{0}' was not '1' or '2'", playersLine);       
                 SetUpPlayers();
                 return;     
             }
@@ -64,7 +64,7 @@ namespace RockPaperLizard
         {
             Console.WriteLine("How many games do you want to play best out of? Must be an odd integer.");
             //I'll deal with this using try and catch, instead of the TryParse approach used in SetUpPlayers()
-            //but TryParse is probably better ("avoids an exception for the fairly unexceptional case of user error"-stackoverflow)
+            //TryParse "avoids an exception for the fairly unexceptional case of user error"-stackoverflow
             int bestOf;
             string gamesLine = Console.ReadLine();
             try
@@ -95,7 +95,8 @@ namespace RockPaperLizard
             player1.ChooseWeapon();                 
             player2.ChooseWeapon();
             
-            Console.WriteLine(player1.name + " chose " + weapons[player1.weaponChoice] + " and " + player2.name + " chose " + weapons[player2.weaponChoice]);
+            Console.WriteLine(player1.name + " chose " + weapons[player1.weaponChoice] +
+                " and " + player2.name + " chose " + weapons[player2.weaponChoice]);
             DecideRoundWinner();
             CheckScore();
         }
